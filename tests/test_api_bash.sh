@@ -32,7 +32,7 @@ test_endpoint() {
     if [[ "$http_status" -ge 200 && "$http_status" -lt 300 ]]; then
         echo "SUCESSO (Status: $http_status)"
         echo "Resposta:"
-        echo "$http_body" | jq . # Usa jq para formatar a saída
+        echo "$http_body" | jq .
         # Retorna o corpo da resposta para extração de IDs
         echo "$http_body"
     else

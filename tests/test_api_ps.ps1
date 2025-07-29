@@ -1,4 +1,4 @@
-# Script de teste da API DNCommerce para PowerShell (Versão Corrigida e Completa)
+# Script de teste da API DNCommerce para PowerShell
 
 $baseUrl = "http://localhost:3000"
 $headers = @{"Content-Type"="application/json"}
@@ -21,7 +21,7 @@ function Test-Endpoint {
             ErrorAction = 'Stop'
         }
         if ($Body) {
-            $params.Body = ($Body | ConvertTo-Json -Depth 10) # Aumentado o Depth para objetos aninhados
+            $params.Body = ($Body | ConvertTo-Json -Depth 10)
         }
         
         $response = Invoke-RestMethod @params
@@ -94,7 +94,7 @@ Start-Sleep -Seconds 1
 
 # === SEÇÃO DE CLIENTES ===
 
-# 7. Criar um novo cliente (com estrutura de endereço correta)
+# 7. Criar um novo cliente
 $clientBody = @{
     nome = "Joana Doe"
     email = "joana.doe+$(Get-Date -Format "yyyyMMddHHmmssfff")@example.com"
@@ -131,14 +131,14 @@ Start-Sleep -Seconds 1
 
 # === SEÇÃO DE VENDAS ===
 
-# 11. Registrar uma nova venda (com `preco_unitario` incluído)
+# 11. Registrar uma nova venda
 $saleBody = @{
     cliente_id = $clientId
     itens = @(
         @{
             produto_id = $productId
             quantidade = 2
-            preco_unitario = 95.50 # Preço atualizado do produto
+            preco_unitario = 95.50
         }
     )
 }
