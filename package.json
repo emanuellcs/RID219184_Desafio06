@@ -1,0 +1,27 @@
+{
+  "name": "rid219184_desafio06",
+  "version": "1.0.0",
+  "description": "Desafio 06 do curso de Engenheiro de Software da Escola DNC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emanuellcs/RID219184_Desafio06.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/emanuellcs/RID219184_Desafio06/issues"
+  },
+  "homepage": "https://github.com/emanuellcs/RID219184_Desafio06#readme",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.5"
+  }
+}
